@@ -88,12 +88,13 @@ public class AirCraftType extends BaseEntity {
                 '}';
     }
 
-    public AirCraftType(String type, String manWeight, String womenWeight, String childWeight, String infantWeight) {
+    public AirCraftType(String type, String manWeight, String womenWeight, String childWeight, String infantWeight, boolean isDeleted) {
         this.type = type;
         this.manWeight = manWeight;
         this.womenWeight = womenWeight;
         this.childWeight = childWeight;
         this.infantWeight = infantWeight;
+        this.isDeleted = isDeleted;
     }
 
     public void setInfantWeight(String infantWeight) {
