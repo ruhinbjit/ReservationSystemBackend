@@ -1,5 +1,6 @@
 package com.example.ReservationSystemBackend.controller;
 
+
 import com.example.ReservationSystemBackend.entity.AirCraftType;
 import com.example.ReservationSystemBackend.service.AirCraftTypeService;
 
@@ -44,11 +45,10 @@ public class AirCraftTypeController {
 //    	//return airCraftTypeService.saveAircraftType(airCraftType);
 //    }
 //    
-    @RequestMapping(value = "/save-aircraft-type", method = RequestMethod.POST)
-    public String saveCourse(@ModelAttribute("airCraftType") AirCraftType airCraftType) {
-    	airCraftTypeService.saveAircraftType(airCraftType);
-        return "redirect:/course";
-    }
+    @PostMapping
+    public AirCraftType createEmployee(@RequestBody AirCraftType airCraftType) {
+		return airCraftTypeService.saveAircraftType(airCraftType);
+	}
     
 
 }
