@@ -13,9 +13,9 @@ public class AirCraftType extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "type", nullable = false)
-    @NotEmpty(message = "type name must not be empty")
-    @Size(min = 2, max = 20, message = "type must be at least 2 characters")
+    @Column(name = "type")
+//    @NotEmpty(message = "type name must not be empty")
+//    @Size(min = 2, max = 20, message = "type must be at least 2 characters")
     private String type;
 
     @Column(name = "man_weight")
