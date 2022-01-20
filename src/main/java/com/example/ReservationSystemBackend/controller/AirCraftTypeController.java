@@ -34,7 +34,9 @@ public class AirCraftTypeController {
         if (error.hasErrors()) {
             return "error";
         } else {
-            airCraftTypeService.saveAircraftType(airCraftType);
+            airCraftTypeService.saveAircraftType(new AirCraftType("B1","69","50","40","30",false));
+
+           // airCraftTypeService.saveAircraftType(airCraftType);
 
             return "aircraft type saved";
             //return "redirect:/students";
