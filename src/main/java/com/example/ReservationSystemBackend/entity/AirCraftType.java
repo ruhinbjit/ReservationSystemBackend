@@ -76,17 +76,19 @@ public class AirCraftType extends BaseEntity {
         this.childWeight = childWeight;
     }
 
-    @Override
-    public String toString() {
-        return "AirCraftType{" +
-                "id=" + id +
-                ", type='" + type + '\'' +
-                ", manWeight='" + manWeight + '\'' +
-                ", womenWeight='" + womenWeight + '\'' +
-                ", childWeight='" + childWeight + '\'' +
-                ", infantWeight='" + infantWeight + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "AirCraftType{" +
+//                "id=" + id +
+//                ", type='" + type + '\'' +
+//                ", manWeight='" + manWeight + '\'' +
+//                ", womenWeight='" + womenWeight + '\'' +
+//                ", childWeight='" + childWeight + '\'' +
+//                ", infantWeight='" + infantWeight + '\'' +
+//                '}';
+//    }
+    
+    
 
     public AirCraftType(String type, String manWeight, String womenWeight, String childWeight, String infantWeight, boolean isDeleted) {
         this.type = type;

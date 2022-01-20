@@ -30,19 +30,13 @@ public class AirCraftTypeController {
 
     //Saving students data
     @PostMapping("/save-aircraft-type")
-    public String saveAircraftType(@Valid @ModelAttribute("aircraft_type") AirCraftType airCraftType, BindingResult error, Model model) {
-        if (error.hasErrors()) {
-            return "error";
-        } else {
-            airCraftTypeService.saveAircraftType(new AirCraftType("B1","69","50","40","30",false));
-
-           // airCraftTypeService.saveAircraftType(airCraftType);
-
-            return "aircraft type saved";
-            //return "redirect:/students";
-        }
+    public AirCraftType saveAircraftType(@Valid @ModelAttribute("aircraft_type") AirCraftType airCraftType) {
+//    	 airCraftTypeService.saveAircraftType(new AirCraftType("B1","69","50","40","30",false));
+    	
+    	
+//            airCraftTypeService.saveAircraftType(new AirCraftType("B1","69","50","40","30",false));
+    	
+    	return airCraftTypeService.saveAircraftType(airCraftType);
     }
-
-
 
 }

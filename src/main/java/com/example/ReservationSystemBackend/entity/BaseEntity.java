@@ -14,8 +14,11 @@ public abstract class BaseEntity {
 
     @Column(updatable = false)
     @CreationTimestamp
-    protected LocalDateTime createdAt;
+    public LocalDateTime createdAt;
     @UpdateTimestamp
-    protected LocalDateTime updatedAt;
-    protected boolean isDeleted;
+    public LocalDateTime updatedAt;
+    public boolean isDeleted;
 }
+
+
+
