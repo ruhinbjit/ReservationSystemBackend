@@ -1,6 +1,6 @@
 package com.example.ReservationSystemBackend.controller;
 
-
+//import com.appdeveloperblog.app.ws.model.Employee;
 import com.example.ReservationSystemBackend.entity.AirCraftType;
 import com.example.ReservationSystemBackend.service.AirCraftTypeService;
 
@@ -45,8 +45,9 @@ public class AirCraftTypeController {
 //    	//return airCraftTypeService.saveAircraftType(airCraftType);
 //    }
 //    
-    @PostMapping
-    public AirCraftType createEmployee(@RequestBody AirCraftType airCraftType) {
+    
+    @PostMapping("/save-aircraft-type")
+    public AirCraftType saveAircraftType(@RequestBody AirCraftType airCraftType) {
 		return airCraftTypeService.saveAircraftType(airCraftType);
 	}
     
