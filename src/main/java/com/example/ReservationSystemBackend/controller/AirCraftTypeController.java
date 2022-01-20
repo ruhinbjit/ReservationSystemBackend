@@ -1,8 +1,11 @@
 package com.example.ReservationSystemBackend.controller;
 
+
 import com.example.ReservationSystemBackend.entity.AirCraftType;
 import com.example.ReservationSystemBackend.service.AirCraftTypeService;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -29,14 +32,23 @@ public class AirCraftTypeController {
 
 
     //Saving students data
-    @PostMapping("/save-aircraft-type")
-    public AirCraftType saveAircraftType(@Valid @ModelAttribute("aircraft_type") AirCraftType airCraftType) {
-//    	 airCraftTypeService.saveAircraftType(new AirCraftType("B1","69","50","40","30",false));
-    	
-    	
-//            airCraftTypeService.saveAircraftType(new AirCraftType("B1","69","50","40","30",false));
-    	
-    	return airCraftTypeService.saveAircraftType(airCraftType);
-    }
+//    @PostMapping("/save-aircraft-type")
+//    public ResponseEntity saveAircraftType(@Valid @ModelAttribute("aircraft_type") AirCraftType airCraftType) {
+////    	 airCraftTypeService.saveAircraftType(new AirCraftType("B1","69","50","40","30",false));
+//    	
+//    	
+//            //airCraftTypeService.saveAircraftType(new AirCraftType("B1","69","50","40","30",false));
+//    	
+//    	groupRepository.save(airCraftType);
+//        return ResponseEntity.status(HttpStatus.CREATED).build();
+//    	
+//    	//return airCraftTypeService.saveAircraftType(airCraftType);
+//    }
+//    
+    @PostMapping
+    public AirCraftType createEmployee(@RequestBody AirCraftType airCraftType) {
+		return airCraftTypeService.saveAircraftType(airCraftType);
+	}
+    
 
 }
